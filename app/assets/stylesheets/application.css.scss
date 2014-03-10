@@ -1,0 +1,59 @@
+ @import "foundation_and_overrides";
+.at{
+	font-weight: bold;
+	font-style: italic;
+	color: #085F91;
+
+}
+.sc{
+	width: 50px;
+	margin-right: 20px;
+}
+.right{
+	padding-top: 1.1em;
+}
+a{
+	color: black;
+	&:hover{
+		color: black;
+	}
+}
+
+.back{
+	color: grey;
+	font-style: italic;
+
+	
+}
+.track, .album{
+	background: rgb(240, 240, 240);
+	cursor: pointer;
+	border-radius: 6px;
+	-webkit-transition: -webkit-transform .3s ease-out; 
+   -moz-transition: -moz-transform .3s ease-out; 
+   -o-transition: -o-transform .3s ease-out; 
+    transition: transform .3s ease-out; 
+	&:hover{
+		background: yellowgreen;
+		 -moz-transform: scale(1.01);
+   -webkit-transform: scale(1.01);
+   -o-transform: scale(1.01);
+   transform: scale(1.01);
+	}
+}
+
+.track{
+	padding: 5px 10px;
+	margin-bottom: 5px;
+}
+
+.album{
+	margin-bottom: 20px !important;
+	padding: 20px;
+	.count{
+		color: grey;
+		font-style: italic;
+	}
+}
+
+

@@ -1,0 +1,7 @@
+.row
+	.small-12.columns
+		h1 TRACKS |
+		each track in tracks
+			.row
+				.small-8.columns.small-offset-2
+					= title

@@ -1,0 +1,16 @@
+partial 'tracks'
+
+hr
+.row
+	.large-12.columns
+		h3 ALL ALBUMS | {{totalCount}}
+		each album in controller
+			link-to 'album' album
+				.row.album
+					.small-10.columns.title
+						= album.title
+						span.date ({{album.releaseDate}})
+					.small-2.columns.count {{album.tracks_count}} TRACK
+	
+
+

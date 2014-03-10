@@ -5,6 +5,8 @@
 #= require music_app
 
 # for more details see: http://emberjs.com/guides/application/
-window.MusicApp = Ember.Application.create()
+window.MusicApp = Ember.Application.create
+	LOG_TRANSITIONS: true, 
+  LOG_TRANSITIONS_INTERNAL: true 
 
 

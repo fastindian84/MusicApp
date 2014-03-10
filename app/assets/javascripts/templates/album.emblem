@@ -1,0 +1,17 @@
+h1.at {{title}} 
+	
+link-to 'albums' class='back'| <-Back to albums
+hr
+.row
+	h1 TRACKS | {{tracksTotalCount}}
+	each track in tracks
+		.small-12.columns.track
+			img.sc src='assets/iTunes.png'
+			= track.title
+			small ({{track.genre}})
+			.right 3.45
+	else
+			h3 There are no tracks in this album						
+				
+	
+

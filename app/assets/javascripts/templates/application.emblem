@@ -1,0 +1,4 @@
+.row
+	h1#music Music
+	.small-10.small-offset-2.columns
+		= outlet
