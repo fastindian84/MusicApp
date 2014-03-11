@@ -3,7 +3,11 @@ h1
 	|{{title}}
 
 
-form
+form multiple="multiple" 
 	= view Ember.TextField valueBinding="title"
-	= canvas-file width=250 height=250 value=cover| Upload image
+	.row
+		.large-6.columns
+			= canvas-file width=250 height=250 value=cover| Upload image
+		<!-- .large-6.columns -->
+
 	input{action 'submitAction'} type='submit' value='Save' class='button alert'

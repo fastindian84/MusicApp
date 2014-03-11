@@ -1,7 +1,14 @@
 MusicApp.TracksEditController = Ember.ObjectController.extend
 	actions:
 		submitAction:->
-			@set('title', @get('title') )
-			@set('cover', @get('cover'))
-			@get('store').commit()
+			if @get('isDirty')
+				@set('title', @get('title'))
+				@set('cover', @get('cover'))
+				# else
+				# 	@set('cover', @get('data.cover'))		
+
+			# console.log @get('data.cover')
+			# console.log @get('cover')
+				@get('store').commit()
+			# @transitionToRoute ''
 
