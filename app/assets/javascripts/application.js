@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+
 //= require application_ember.js.coffee
 
 $(function(){ $(document).foundation(); });

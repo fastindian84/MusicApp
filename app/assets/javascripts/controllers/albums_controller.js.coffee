@@ -14,6 +14,9 @@ MusicApp.AlbumsController = Ember.ArrayController.extend
 	tracks: (->
 			@get('tracksAll').filterBy 'album_id', null
 		).property('tracksAll.@each.album_id')
+	actions: 
+		editTrack: (track)->
+			@transitionToRoute 'tracks.edit', track
 
 
 #### ALBUM single

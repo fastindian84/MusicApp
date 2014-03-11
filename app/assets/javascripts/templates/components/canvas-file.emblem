@@ -1,0 +1,7 @@
+.thumbnail
+  img.preview{bind-attr src=src}
+  img.shadow.hide
+  canvas.hide
+input#imageField type="file" class="hide"
+div
+	button.button.info{action 'start'} {{yield}}

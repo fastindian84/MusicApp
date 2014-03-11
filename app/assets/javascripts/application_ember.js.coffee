@@ -1,6 +1,8 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require ember-uploader.min.js
+
 #= require_self
 #= require music_app
 

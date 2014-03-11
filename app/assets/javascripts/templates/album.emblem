@@ -4,7 +4,7 @@ link-to 'albums' class='back'| <-Back to albums
 if isEditing
 	a.back.button.tiny.radius.right.success{action 'backToAlbum'} To Albom
 else
-	a.back.button.tiny.radius.right.alert{action 'editAlbum'} Edit album ->
+	a.back.button.tiny.radius.right.alert{action 'editAlbum'} Add more tracks ->
 
 hr
 .row
@@ -15,18 +15,21 @@ hr
 			each track in tracksWithoutAlbum
 				a{action 'addToAlbum' track}
 					.small-12.columns.track
-						img.sc src='assets/iTunes.png'
+						img.sc{bindAttr src="track.cover"}
 						= track.title
 						small ({{track.genre}})
-						.right 3.45
-				
+						.right
+							.time 3.45
+							.delete Add
+								 
+						
 
 
 
 	else		
 		each track in tracks
 			.small-12.columns.track
-				img.sc src='assets/iTunes.png'
+				img.sc{bindAttr src="track.cover"}
 				= track.title
 				small ({{track.genre}})
 				.right
