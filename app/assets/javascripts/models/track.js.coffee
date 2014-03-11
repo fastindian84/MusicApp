@@ -4,6 +4,7 @@ MusicApp.Track = DS.Model.extend
   title: DS.attr 'string'
   genre: DS.attr 'string'
   cover: DS.attr 'string'
+  song: DS.attr 'string'
   
   album_id: DS.attr 'number'
   releaseDate: DS.attr 'date'

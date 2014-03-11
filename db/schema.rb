@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140311103817) do
+ActiveRecord::Schema.define(version: 20140311130730) do
 
   create_table "albums", force: true do |t|
     t.string   "title"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140311103817) do
     t.string   "song_content_type"
     t.integer  "song_file_size"
     t.datetime "song_updated_at"
+    t.string   "cover"
   end
 
   add_index "tracks", ["album_id"], name: "index_tracks_on_album_id"

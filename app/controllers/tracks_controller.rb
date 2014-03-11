@@ -12,14 +12,21 @@ class TracksController < ApplicationController
 	end
 	
 	def update
+		# logger params
 		respond_with Track.update params[:id], tracks_params
 	end
 
 
 private 
 	def tracks_params
-		params.require(:track).permit(:title, :album_id, :genre, :cover, :release_date)
+		validate_cover
+		params.require(:track).permit(:title, :album_id, :genre, :cover, :song, :release_date)
 	end
+
+	def validate_cover
+  params[:track].delete 'cover' unless params[:track]['cover'].include? 'data:image'
+  params[:track].delete 'song' unless params[:track]['song'].include? 'data'
+end
 
 
 end
