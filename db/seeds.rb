@@ -3,6 +3,10 @@
 #
 
 
+Album.delete_all
+Track.delete_all
+
+
 
 
 a1 = Album.create title: Faker::Lorem.sentence(sentence_count=2), release_date: Date.today
@@ -10,6 +14,6 @@ a2 = Album.create title: Faker::Lorem.sentence(sentence_count=2), release_date: 
 # a3 = Album.create title: Faker::Lorem.sentence(sentence_count=2), genre: Faker::Lorem.word
 
 
-5.times { a1.tracks << Track.create( title: Faker::Lorem.sentence(sentence_count=2), genre: Faker::Lorem.word)}
+10.times { a1.tracks << Track.create( title: Faker::Lorem.sentence(sentence_count=2), genre: Faker::Lorem.word)}
 
 Track.create title: Faker::Lorem.sentence(sentence_count=2), genre: Faker::Lorem.word

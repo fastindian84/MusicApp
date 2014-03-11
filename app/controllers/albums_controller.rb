@@ -9,6 +9,16 @@ class AlbumsController < ApplicationController
 		respond_with Album.find(params[:id])
 	end		
 
+	def update
+		respond_with Album.update params[:id], params_album
+	end	
+
+
+private
+	def params_album
+		params.require(:album).permit(:title, :track_ids, :tracks_count, :release_date)
+	end
+
 
 
 end

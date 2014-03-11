@@ -1,0 +1,9 @@
+.row
+	h1 TRACKS | {{tracksTotalCount}}
+	each track in tracks
+		link-to 'track' track
+			.small-12.columns.track.link
+				img.sc src='assets/iTunes.png'
+				= track.title
+				small ({{track.genre}})
+				.right 3.45

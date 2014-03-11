@@ -1,4 +1,13 @@
-partial 'tracks'
+<!-- partial 'tracks/track' -->
+.row
+	h1 TRACKS | {{tracksTotalCount}}
+	each track in tracks
+		link-to 'track' track
+			.small-12.columns.track.link
+				img.sc src='assets/iTunes.png'
+				= track.title
+				small ({{track.genre}})
+				.right 3.45
 
 hr
 .row
@@ -6,7 +15,7 @@ hr
 		h3 ALL ALBUMS | {{totalCount}}
 		each album in controller
 			link-to 'album' album
-				.row.album
+				.row.album.link
 					.small-10.columns.title
 						= album.title
 						span.date ({{album.releaseDate}})

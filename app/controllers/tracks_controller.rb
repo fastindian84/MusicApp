@@ -6,5 +6,20 @@ class TracksController < ApplicationController
 	end	
 
 
+	
+	def show
+		respond_with Track.find params[:id]
+	end
+	
+	def update
+		respond_with Track.update params[:id], tracks_params
+	end
+
+
+private 
+	def tracks_params
+		params.require(:track).permit(:title, :album_id, :genre, :release_date)
+	end
+
 
 end

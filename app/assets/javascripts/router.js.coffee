@@ -2,7 +2,8 @@
 
 MusicApp.Router.map ()->
 
-  @resource 'tracks'
-  @resource 'albums'
-  @resource('album', { path: '/albums/:album_id'})
+	@resource 'tracks'
+	@resource 'track', {path: '/tracks/:track_id' }
+	@resource 'albums'
+	@resource 'album', { path: '/albums/:album_id'}
 

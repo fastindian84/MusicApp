@@ -1,4 +1,4 @@
 class TrackSerializer < ActiveModel::Serializer
-  attributes :id, :title, :genre, :release_date
+  attributes :id, :title, :genre, :release_date, :album_id
   belongs_to :album
 end
