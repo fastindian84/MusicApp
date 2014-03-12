@@ -14,5 +14,5 @@ hr
 					.small-10.columns.title
 						= album.title
 						span.date ({{album.formattedDate}})
-					.small-2.columns.count {{album.tracks_count}} TRACK
+					.small-2.columns.count {{album.tracksTotalCount}} TRACKs
 	

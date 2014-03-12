@@ -1,0 +1,2 @@
+.date.datepicker data-date-format="yyyy-mm-dd"
+  input#date.form-control{bindAttr value="formattedValue" rel="rel"} size="16" type="text"

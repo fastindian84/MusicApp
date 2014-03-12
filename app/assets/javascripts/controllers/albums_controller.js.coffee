@@ -22,25 +22,17 @@ MusicApp.AlbumsController = Ember.ArrayController.extend
 #### ALBUM single
 MusicApp.AlbumController = Ember.ObjectController.extend
 	isEditing: false
-		
-	tracksTotalCount: (->
-			@get('tracks_count')
-		).property('tracks_count')
-
 	
 	tracksWithoutAlbum: (->
 				@get('tracksAll').filterBy 'album_id', null
 		).property('tracksAll.@each.album_id')
 
-
+	# collectionView
 	actions:
 		removeTrack: (track) ->
 			unless @get('isSaving') 
 				@get('tracks').removeObject(track)
-				tracks_remain = @get('tracks_count') - 1 
 				track.set('album_id', null)
-
-				@set('tracks_count', tracks_remain)
 				@store.commit()
 
 		editAlbum: ->
@@ -51,11 +43,11 @@ MusicApp.AlbumController = Ember.ObjectController.extend
 
 		addToAlbum:(track) ->	
 			unless @get('isSaving') 
-				@get('tracks').pushObject(track)
 				track.set('album_id', @get('id'))
-				tracks_remain = @get('tracks_count') + 1 
-				@set('tracks_count', tracks_remain)
-				@get('store').commit()
+				@get('tracks').pushObject(track)
+				# tracks_remain = @get('tracks_count') + 1 
+				# @set('tracks_count', tracks_remain)
+				# @get('store').commit()
 
 
 
@@ -66,10 +58,10 @@ MusicApp.AlbumNewController = Ember.ObjectController.extend
 	  ).observes('currentPath')
 
 	actions:
-		createAlbum: ->	
+		submitAlbum: ->	
 			m = MusicApp.Album.createRecord	
 				title: @get('title')
-				release_date: @get('released_date')
+				release_date: @get('release_date')
 				tracks_count: 0
 			m.save()
 			@transitionToRoute('albums')

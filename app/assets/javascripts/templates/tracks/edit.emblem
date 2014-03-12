@@ -11,6 +11,9 @@ form multiple="multiple"
 		.large-6.columns
 			= canvas-file width=250 height=250 value=cover| Upload image
 		.large-6.columns
-			= view MusicApp.Upload file=song name='song'
-
+			input type='file'	value=song
+			= song
 	input{action 'submitAction'} type='submit' value='Save' class='button alert'
+
+form#upload submit="uploadFile"
+	input class='button' type='submit' value='Upload File'

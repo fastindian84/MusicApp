@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker
 //= require foundation
 //= require moment
+//= require jquery.form
 
 //= require application_ember.js.coffee
 

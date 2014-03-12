@@ -1,9 +1,9 @@
 h1 New
-form submit="createAlbum"
+form submit="submitAlbum"
 	.small-2.columns.inline Title
 	.small-4.columns.inline 
 		= view Ember.TextField value=title
 	.small-2.columns.inline Released at
 	.small-4.columns.inline	
-		= view Ember.TextField value=release_date
+		= view MusicApp.DatePicker value=release_date
 	input type='submit'	value='Create Album' class='button'

@@ -5,6 +5,9 @@ class TracksController < ApplicationController
 			respond_with Track.all
 	end	
 
+	def upload
+		puts '1'
+	end	
 
 	
 	def show
