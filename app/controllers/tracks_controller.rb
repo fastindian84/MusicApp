@@ -24,8 +24,8 @@ private
 	end
 
 	def validate_cover
-  params[:track].delete 'cover' unless params[:track]['cover'].include? 'data:image'
-  params[:track].delete 'song' unless params[:track]['song'].include? 'data'
+  params[:track].delete 'cover' if params[:track]['cover'].include? 'assets'
+  params[:track].delete 'song' if params[:track]['song'].include? 'assets'
 end
 
 

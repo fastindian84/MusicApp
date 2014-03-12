@@ -1,4 +1,5 @@
 .row
 	h1#music Music
+	link-to 'albumNew' class='button tiny' | New Album 
 	.small-10.small-offset-2.columns
 		= outlet

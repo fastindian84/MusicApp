@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require moment
 
 //= require application_ember.js.coffee
 

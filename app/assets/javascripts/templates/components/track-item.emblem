@@ -1,0 +1,8 @@
+.small-12.columns.track
+	img.sc{bind-attr src="track.cover"}
+	= track.title
+	small ({{track.genre}})
+	.right
+		.time 3.45
+		= yield	
+		

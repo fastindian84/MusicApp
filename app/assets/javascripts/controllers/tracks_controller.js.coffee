@@ -1,7 +1,12 @@
 MusicApp.TracksEditController = Ember.ObjectController.extend
+	progressBar: false
 	actions:
 		submitAction:->
-			if @get('isDirty')
-				@get('store').commit()
+			@get('store').commit()
+			@set('progressBar', true)
+			# if @get('isLoaded')
+				
+
+				# @set('progressBar', false)
 			@transitionToRoute 'albums'
 

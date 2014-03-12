@@ -1,3 +1,0 @@
-input#fileField type="file" class="hide"
-div
-	button.button.info{action 'start'} {{yield}}

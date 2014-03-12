@@ -1,12 +1,9 @@
 .row
 	h1 TRACKS | {{tracksTotalCount}}
 	each track in tracks
-		.small-12.columns.track
-			img.sc{bind-attr src="track.cover"}{action 'editTrack' track}
-			= track.title
-			small ({{track.genre}})
-			.right 3.45
-
+		= track-item track=track
+			.delete.button.tiny.radius{action 'editTrack' track} Edit
+		
 hr
 .row
 	.large-12.columns
@@ -16,8 +13,6 @@ hr
 				.row.album.link
 					.small-10.columns.title
 						= album.title
-						span.date ({{album.releaseDate}})
+						span.date ({{album.formattedDate}})
 					.small-2.columns.count {{album.tracks_count}} TRACK
 	
-
-

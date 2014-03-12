@@ -13,29 +13,17 @@ hr
 		.row
 			h4 Choose track to add:
 			each track in tracksWithoutAlbum
+
 				a{action 'addToAlbum' track}
-					.small-12.columns.track
-						img.sc{bindAttr src="track.cover"}
-						= track.title
-						small ({{track.genre}})
-						.right
-							.time 3.45
-							.delete Add
-								 
-						
-
-
+					= track-item track=track
+						.delete Add
 
 	else		
 		each track in tracks
-			.small-12.columns.track
-				img.sc{bindAttr src="track.cover"}
-				= track.title
-				small ({{track.genre}})
-				.right
-					.time 3.45
-					.delete 
-						a{action 'removeTrack' track} Remove
+			a{action 'removeTrack' track} 
+				= track-item track=track
+					.delete Remove
+						
 		else
 				h3 There are no tracks in this album						
 			

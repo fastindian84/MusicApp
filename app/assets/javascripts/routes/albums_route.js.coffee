@@ -13,3 +13,7 @@ MusicApp.AlbumRoute = Ember.Route.extend
 		controller.set('model', model)
 		controller.set('tracksAll', MusicApp.Track.find())
 
+MusicApp.AlbumNewRoute = Ember.Route.extend
+	model: -> 
+		Em.Object.create({})
+	

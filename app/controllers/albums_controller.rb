@@ -7,11 +7,20 @@ class AlbumsController < ApplicationController
 
 	def show
 		respond_with Album.find(params[:id])
+	end			
+
+	def create
+		respond_with Album.create params_album
 	end		
 
 	def update
 		respond_with Album.update params[:id], params_album
 	end	
+	
+	def destroy
+		respond_with Album.destroy params[:id]
+	end	
+	
 
 
 private
