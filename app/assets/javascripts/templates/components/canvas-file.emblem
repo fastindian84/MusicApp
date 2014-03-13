@@ -4,4 +4,4 @@
   canvas.hide
 input#imageField type="file" class="hide"
 div
-	button.button.info{action 'start'} {{yield}}
+	button.button.small.round.info{action 'start'} {{yield}}

@@ -6,7 +6,9 @@ class TracksController < ApplicationController
 	end	
 
 	def upload
-		puts '1'
+   track = Track.find(params[:id])
+   track.update_attributes song: params[:file]
+   render nothing: true
 	end	
 
 	
@@ -15,7 +17,6 @@ class TracksController < ApplicationController
 	end
 	
 	def update
-		# logger params
 		respond_with Track.update params[:id], tracks_params
 	end
 

@@ -31,9 +31,9 @@ MusicApp.AlbumController = Ember.ObjectController.extend
 	actions:
 		removeTrack: (track) ->
 			unless @get('isSaving') 
-				@get('tracks').removeObject(track)
-				track.set('album_id', null)
-				@store.commit()
+        @get('tracks').removeObject(track)
+        @store.commit()
+        track.set('album_id', null)
 
 		editAlbum: ->
 			@set 'isEditing', true
@@ -43,11 +43,11 @@ MusicApp.AlbumController = Ember.ObjectController.extend
 
 		addToAlbum:(track) ->	
 			unless @get('isSaving') 
-				track.set('album_id', @get('id'))
-				@get('tracks').pushObject(track)
-				# tracks_remain = @get('tracks_count') + 1 
-				# @set('tracks_count', tracks_remain)
-				# @get('store').commit()
+        track.set('album_id', @get('id'))
+        @get('tracks').pushObject(track)
+        @get('store').commit()
+
+
 
 
 

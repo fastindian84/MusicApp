@@ -48,8 +48,9 @@ a{
 
 
 .track{
-	padding: 5px 10px;
-	margin-bottom: 5px;
+  height: 60px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
 }
 
 .album{
@@ -77,4 +78,8 @@ a{
 	margin-bottom: 0;
 	position: relative;
 	top: -9px;
+}
+
+.hide{
+  display: none;
 }

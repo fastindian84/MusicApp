@@ -1,0 +1,15 @@
+if fileAdded
+  a.button.tiny.radius.alert{ action 'removeFile' }  Remove: {{songFile}}
+  br
+  unless uploadFinished
+    a.button.success.tiny.radius{ action 'upload' } Upload File
+else
+  form
+    = input type='file' class='hide' id='upload'
+
+    input#send type='submit' class='button success tiny radius hide' value='Upload File'
+  .div
+    button#chose.button.alert.tiny.radius{action 'start'} Chose File
+
+
+
