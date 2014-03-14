@@ -11,6 +11,17 @@ class TracksController < ApplicationController
    render nothing: true
 	end	
 
+	def download
+		track = Track.find(params[:id])
+		if !track.song.blank?
+			file_name = track.song_file_name
+			song_file = Rails.root.join('public', 'assets', 'tracks', "#{track.id}", "#{file_name}") 
+			send_file song_file, filename: file_name
+		else
+			respond_with track
+		end	
+	end
+
 	
 	def show
 		respond_with Track.find params[:id]

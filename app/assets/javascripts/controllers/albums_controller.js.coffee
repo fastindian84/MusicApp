@@ -43,9 +43,9 @@ MusicApp.AlbumController = Ember.ObjectController.extend
 
 		addToAlbum:(track) ->	
 			unless @get('isSaving') 
-        track.set('album_id', @get('id'))
         @get('tracks').pushObject(track)
         @get('store').commit()
+        track.set('album_id', @get('id'))
 
 
 

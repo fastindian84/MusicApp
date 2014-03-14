@@ -20,9 +20,8 @@ hr
 
 	else		
 		each track in tracks
-			a{action 'removeTrack' track} 
-				= track-item track=track
-					.delete Remove
+			= track-item track=track
+				.delete.button.info.tiny.radius{action 'removeTrack' track} Remove
 						
 		else
 				h3 There are no tracks in this album						

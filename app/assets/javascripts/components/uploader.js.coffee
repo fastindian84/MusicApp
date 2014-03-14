@@ -5,6 +5,7 @@ MusicApp.FileUploadComponent = Ember.Component.extend
 
 
   change: (e)->
+    
 
 
     input = e.target
@@ -28,6 +29,7 @@ MusicApp.FileUploadComponent = Ember.Component.extend
       uploader.upload @get('files')
       uploader.on 'didUpload', ->
         self.set('uploadFinished', true)
+       
 
 
 

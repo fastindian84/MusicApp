@@ -83,3 +83,10 @@ a{
 .hide{
   display: none;
 }
+
+.download{
+	top: 7px !important;
+	margin-right: 11px;
+	@extend .delete;
+
+}

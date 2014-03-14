@@ -4,6 +4,7 @@ MusicApp::Application.routes.draw do
   resources :albums
 
   resources :tracks do
+    get 'download', on: :member
     post 'upload', on: :member
   end
 

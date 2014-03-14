@@ -1,13 +1,13 @@
 h1 
 	img.sc{bind-attr src="cover"}
 	|{{title}} ({{genre}})
+h4 {{song}}
 
 
-a{action "submitAction"} Save
+
 form multiple="multiple" 
 	= view Ember.TextField valueBinding="title"
 	= view Ember.TextField valueBinding="genre"
-	h4: a{bind-attr src=song}  Download Track
 
 	.row
 		.large-6.columns
@@ -16,3 +16,4 @@ form multiple="multiple"
 .large-12.columns
   = file-upload song=song track_id=id
 
+a.button.large{action "submitAction"} Save
