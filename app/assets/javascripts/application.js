@@ -25,4 +25,6 @@ $(function(){ $(document).foundation(); });
 
 
 alert('hi');
+alert('hi2');
+
 
