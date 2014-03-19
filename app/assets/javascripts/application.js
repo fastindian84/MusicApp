@@ -26,5 +26,9 @@ $(function(){ $(document).foundation(); });
 
 alert('hi');
 alert('hi2');
+alert('hi2');
+alert('hi2');
+alert('hi2');
+alert('hi2');
 
 
