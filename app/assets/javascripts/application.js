@@ -24,7 +24,7 @@ $(function(){ $(document).foundation(); });
 
 
 
-alert('after rebase');
+console.log('last commit');
 
 
 
