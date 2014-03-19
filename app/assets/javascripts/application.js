@@ -21,3 +21,8 @@
 
 $(function(){ $(document).foundation(); });
 
+
+
+
+alert('hi');
+
