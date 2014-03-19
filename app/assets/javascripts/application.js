@@ -24,10 +24,7 @@ $(function(){ $(document).foundation(); });
 
 
 
-alert('hi');
-alert('hi2');
-alert('Sprockets');
-alert('Sprockets');
+alert('after rebase');
 
 
 
